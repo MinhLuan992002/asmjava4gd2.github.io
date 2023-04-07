@@ -35,7 +35,11 @@ public class HistoryDaoImpl extends AbstractDao<History> implements HistoryDao {
 		// TODO Auto-generated method stub
 		return null;
 		//HELLO
+
 		//config roi ne
+
+		//t sua file 
+
 	}
 	
 }
