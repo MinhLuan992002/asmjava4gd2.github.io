@@ -20,7 +20,7 @@ public class Video {
 	@Column(name="description")
 	private String description;
 	@Column(name="`views`")
-	private String views;
+	private Integer views;
 	@Column(name="Active")
 	private Boolean Active;
 	public Integer getId() {
@@ -47,10 +47,10 @@ public class Video {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getViews() {
+	public Integer getViews() {
 		return views;
 	}
-	public void setViews(String views) {
+	public void setViews(Integer views) {
 		this.views = views;
 	}
 	public Boolean getActive() {
@@ -59,5 +59,6 @@ public class Video {
 	public void setActive(Boolean active) {
 		Active = active;
 	}
+	
 	
 }

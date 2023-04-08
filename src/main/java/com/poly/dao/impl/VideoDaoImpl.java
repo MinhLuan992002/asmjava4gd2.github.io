@@ -8,7 +8,7 @@ import com.poly.entity.Video;
 
 public class VideoDaoImpl extends AbstractDao<Video> implements VideoDao {
 
-	public Video finById(Integer id) {
+	public Video findById(Integer id) {
 		// TODO Auto-generated method stub
 		return super.findById(Video.class, id);
 	}
@@ -22,5 +22,8 @@ public class VideoDaoImpl extends AbstractDao<Video> implements VideoDao {
 		// TODO Auto-generated method stub
 		return super.findAll(Video.class, true,pageNumber,pageSize);
 	}
+
+
+
 
 }
