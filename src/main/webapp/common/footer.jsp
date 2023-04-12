@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer" style="background-color:black;">
         <div class="container-fluid tm-container-small">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">About Catalog-Z</h3>
-                    <p>Catalog-Z is free <a rel="sponsored" href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2 HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end integration with any kind of CMS website.</p>
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">About OnFlix</h3>
+                    <p>At OnFlix, we want to bring entertainment to the world. Whatever your taste, wherever you live, we bring you the top TV shows, movies and documentaries. Our members control what they want to see, when they want to watch – without ads – with a simple subscription.</p>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
@@ -29,18 +27,38 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                    Copyright 2020 Catalog-Z Company. All rights reserved.
+                    Copyright 2022 OnFlix Company. All rights reserved.
                 </div>
                 <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
-                    Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored" target="_parent">TemplateMo</a>
+                    Designed by <a href="https://www.facebook.com" class="tm-text-gray" rel="sponsored" target="_parent">MLVA</a>
                 </div>
             </div>
         </div>
     </footer>
     
-    <script src="<c:url value= '/templates/user/js/plugins.js'/>"></script>
+    <script src="<c:url value='/Template/User/js/plugins.js'/>"></script>
     <script>
         $(window).on("load", function() {
             $('body').addClass('loaded');
         });
     </script>
+  <script>
+$('#changePassBtn').click(function () {
+	$('#messageChangePass').text('');
+	var currentPass = $('#currentPass').val();
+	var newPass =	  $('#newPass').val();
+	var formData ={
+			'currentPass' : currentPass,
+			'newPass' : newPass
+			};
+	$.ajax({
+		url: 'changePass',
+		type: 'POST',
+		data: formData
+	}).then(function(data) {
+		$('#messageChangePass').text("Password has been changed!!");
+	}).fail(function(error) {
+		$('#messageChangePass').text("ERROR!, Please check your information!!");
+	});
+});
+</script>

@@ -1,6 +1,8 @@
-package com.poly.entity;
+package com.poly.Entity;
 
-import java.security.Timestamp;
+
+
+import java.sql.Timestamp;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -15,6 +17,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "history")
 public class History {
